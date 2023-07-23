@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="500" maxWidth="700" minHeight="500" minWidth="700" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: #2E3348;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.deal.Controller">
+    <children>
+        <AnchorPane layoutY="82.0" prefHeight="418.0" prefWidth="700.0" style="-fx-background-color: #ffffff;">
+            <children>
+                <PasswordField fx:id="Get_String_Key" layoutX="250.0" layoutY="190.0" promptText="Введите ваш ключ!" style="-fx-text-fill:#FFFFFF;-fx-background-color: #2E3348; -fx-background-radius: 12; -fx-border-color: fafafa; -fx-border-radius: 5;">
+                    <font>
+                        <Font name="System Italic" size="16.0" />
+                    </font>
+                </PasswordField>
+                <Button fx:id="FindToFile" layoutX="303.0" layoutY="28.0" mnemonicParsing="false" onAction="#ButtonFindFileAction" style="-fx-background-color: #2E3348;" text="Выбрать файл" textFill="WHITE" />
+                <Text fx:id="PathToFile" fill="#61412b" layoutX="3.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="path" textAlignment="CENTER" wrappingWidth="692.799981689453">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                </Text>
+                <Button fx:id="Encrypt_Button" layoutX="250.0" layoutY="272.0" mnemonicParsing="false" onAction="#Button_File_Encrypt" style="-fx-background-color: #1a4680;" text="Encrypt" textFill="WHITE" />
+                <Button fx:id="Cancel_button" disable="true" layoutX="324.0" layoutY="272.0" mnemonicParsing="false" onAction="#Button_Cancel" style="-fx-background-color: #ff2a00;" text="Cancel" visible="false" />
+                <Button fx:id="Decrypt_Button" layoutX="392.0" layoutY="272.0" mnemonicParsing="false" onAction="#Button_File_Decrypt" style="-fx-background-color: #1a4680;" text="Decrypt" textFill="WHITE" />
+                <ProgressBar fx:id="ProgressBar" layoutX="50.0" layoutY="324.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="18.0" prefWidth="600.0" progress="0.0" visible="false" style="-fx-accent: green;">
+                    <effect>
+                        <ColorAdjust />
+                    </effect>
+                    <cursor>
+                        <Cursor fx:constant="DISAPPEAR" />
+                    </cursor>
+                </ProgressBar>
+                <ChoiceBox fx:id="Deal_Mode" layoutX="274.0" layoutY="93.0" prefWidth="150.0" AnchorPane.leftAnchor="274.0" />
+                <ChoiceBox fx:id="BlockCipherMode" layoutX="275.0" layoutY="143.0" prefWidth="150.0" />
+                <Text fx:id="Error_Text" fill="RED" layoutX="7.0" layoutY="255.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="684.53662109375" />
+            </children>
+        </AnchorPane>
+        <Text fill="#ffdcdc" layoutX="293.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="DEAL" wrappingWidth="113.81494140625">
+            <font>
+                <Font size="49.0" />
+            </font>
+        </Text>
+    </children>
+</AnchorPane>
